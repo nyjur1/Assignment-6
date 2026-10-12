@@ -1,0 +1,11 @@
+(1) After running the command we see the time it took the program to execute:
+real    0m0.061s
+user    0m0.052s
+sys     0m0.007s
+Furthermore, we see that it found: 207 of help in data/warnpeace.txt. 
+
+(2) The threads are not updating the same varibale, everyone thread has its own varibale
+which updates. 
+
+(3)
+
