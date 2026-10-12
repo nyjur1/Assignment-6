@@ -109,7 +109,7 @@ int search_count(char *filename, char *target) {
 
 struct count_result search_instance(char *filename,char *target){
 
-    struct count_result res ={0,NULL}
+    struct count_result res ={0,NULL};
     if(strlen(target)==0){
         return res;
     }
@@ -146,10 +146,11 @@ struct count_result search_instance(char *filename,char *target){
          if(start>0){
             fseek(file, start-1, SEEK_SET);
             int before = fgetc(file);
-            if(!isspace(before)){
+            
+            if(before!='\n'){
                 int c;
 
-                while((c=fgetc(file))!=EOF && !isspace(c)){
+                while((c=fgetc(file))!=EOF && c!='\n'){
 
                 }
             }
